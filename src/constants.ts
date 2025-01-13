@@ -1,6 +1,10 @@
 import type { Experience, Project, Social } from "./types";
 
-export const name = "Syafiq Abdillah Umarghanis";
+export const profile = {
+  name: "Syafiq Abdillah Umarghanis",
+  title: "Software Engineer",
+  email: "abdillah.syafiq@gmail.com",
+};
 
 export const experiences: Experience[] = [
   {

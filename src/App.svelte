@@ -3,10 +3,12 @@
   import Experience from "./component/Experience.svelte";
   import NavBottom from "./component/NavBottom.svelte";
   import Project from "./component/Project.svelte";
+  import Skill from "./component/Skill.svelte";
 </script>
 
 <main class="px-4 bg-slate-100">
   <About />
+  <Skill />
   <Experience />
   <Project />
   <NavBottom />

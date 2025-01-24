@@ -4,12 +4,13 @@
   import NavBottom from "./component/NavBottom.svelte";
   import Project from "./component/Project.svelte";
   import Skill from "./component/Skill.svelte";
+  import ThemeProvider from "./component/ThemeProvider.svelte";
 </script>
 
-<main class="px-4 bg-slate-100">
+<ThemeProvider>
   <About />
   <Skill />
   <Experience />
   <Project />
   <NavBottom />
-</main>
+</ThemeProvider>

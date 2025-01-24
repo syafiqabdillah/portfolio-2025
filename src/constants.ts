@@ -8,7 +8,7 @@ export const profile = {
 
 export const experiences: Experience[] = [
   {
-    name: "Senior Frontend Engineer",
+    name: "Senior Frontend Engineer @ Good Doctor Technology",
     timeline: "July 2023 - now",
     description: "",
   },

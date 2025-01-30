@@ -9,8 +9,8 @@
 
 <ThemeProvider>
   <About />
-  <Skill />
-  <Experience />
   <Project />
+  <Experience />
+  <Skill />
   <NavBottom />
 </ThemeProvider>

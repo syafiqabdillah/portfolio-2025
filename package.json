@@ -21,6 +21,7 @@
     "vite": "^6.0.11"
   },
   "dependencies": {
+    "simple-icons": "^14.4.0",
     "tailwind-merge": "^2.6.0"
   }
 }

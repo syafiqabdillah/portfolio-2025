@@ -19,7 +19,7 @@
   </div>
   <a
     href="mailto:${profile.email}"
-    class={twMerge("mt-2", theme.isDark ? "text-blue-300" : "text-blue-700")}
+    class={twMerge("mt-4", theme.isDark ? "text-blue-300" : "text-blue-700")}
   >
     {profile.email}
   </a>

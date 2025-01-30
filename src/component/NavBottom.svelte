@@ -3,10 +3,10 @@
   import { theme } from "../lib/theme.svelte";
 
   const menu = [
-    { name: "Myself", id: "about" },
-    { name: "Skills", id: "skill" },
-    { name: "Experiences", id: "experience" },
+    { name: "About", id: "about" },
     { name: "Personal Projects", id: "projects" },
+    { name: "Experiences", id: "experience" },
+    { name: "Skills", id: "skill" },
   ];
 </script>
 

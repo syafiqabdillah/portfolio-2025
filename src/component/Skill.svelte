@@ -11,22 +11,27 @@
       }
     }
   }
+
+  const openLink = (query: string) => {
+    window.open(`https://www.google.com/search?q=${query}`, "_blank");
+  };
 </script>
 
 <Container id="skill">
   <h2>Skills</h2>
-  <div class="flex flex-wrap gap-4 px-4 justify-center">
+  <div class="flex flex-wrap gap-4 px-4 justify-center max-w-2xl">
     {#each skills as skill}
-      <div
+      <button
         class={twMerge(
-          "py-2 px-3 rounded-md hover:scale-[1.3] transition-all",
+          "py-2 px-3 rounded-md hover:scale-[1.5] transition-all cursor-pointer",
           theme.isDark
-            ? "text-zinc-700 bg-zinc-400"
+            ? "text-zinc-700 bg-zinc-200 hover:text-zinc-800 hover:font-semibold"
             : "text-zinc-300 bg-zinc-500"
         )}
+        onclick={() => openLink(skill)}
       >
         {skill}
-      </div>
+      </button>
     {/each}
   </div>
 </Container>

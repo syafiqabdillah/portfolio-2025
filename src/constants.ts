@@ -55,7 +55,7 @@ export const socials: Social[] = [
 export const projects: Project[] = [
   {
     name: "Jlantah Hero",
-    desc: "A mobile-first web app that lets you convert your used vegetable oil into money or new oils. It was our submission in Indonesia Digital Tribe 2021-2022 event that led us to Top 7 position out of 2000+ teams. IG: jlantah.hero",
+    desc: "A mobile-first web app that lets the user to  <u class='text-xs'>convert their used vegetable oil into money or new oils</u>. It was our submission to Indonesia Digital Tribe 2021-2022 event that brought my team to <u class='text-xs'>Top 7 position out of 2000+ teams</u>. Instagram: <a class='text-xs' target='_blank' href='https://www.instagram.com/jlantah.hero/'>@jlantahhero</a>",
     src: "/public/img/jlantahhero.png",
     url: "https://jlantahhero.netlify.app/",
     tech: ["Next.js", "React.js", "MongoDB", "Express.js", "Mixpanel"],

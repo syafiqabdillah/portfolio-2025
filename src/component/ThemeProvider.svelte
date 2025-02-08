@@ -15,13 +15,15 @@
   <div class="fixed top-2 right-2">
     <button
       onclick={theme.toggleTheme}
-      class="text-4xl border-[4px] border-solid border-zinc-200 rounded-full"
+      class="border-[1px] flex items-center justify-center h-[40px] w-[40px] border-solid border-zinc-200 rounded-full"
     >
-      {#if !theme.isDark}
-        🌕
-      {:else}
-        🌑
-      {/if}
+      <span class="text-[38px] pb-1">
+        {#if !theme.isDark}
+          🌕
+        {:else}
+          🌑
+        {/if}
+      </span>
     </button>
   </div>
 </main>

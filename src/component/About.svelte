@@ -31,7 +31,7 @@
       toggleUseAccent("abdillah");
     },
     {
-      threshold: 0.03,
+      threshold: 0.02,
     }
   );
 
@@ -41,13 +41,12 @@
       toggleUseAccent("umarghanis");
     },
     {
-      threshold: 0.06,
+      threshold: 0.03,
     }
   );
 
   onMount(() => {
     const observed = document.getElementById("projects");
-    console.log("observed", observed);
     if (observed) {
       ioSyafiq.observe(observed);
       ioAbdillah.observe(observed);

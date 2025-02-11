@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
   import { twMerge } from "tailwind-merge";
-  import { profile } from "../constants";
+  import { profile, socials } from "../constants";
   import { theme } from "../lib/theme.svelte";
   import Container from "./Container.svelte";
 
@@ -66,7 +66,7 @@
     <span
       class={twMerge(
         "text-3xl transition-colors duration-500",
-        accent.syafiq ? "text-teal-300" : ""
+        accent.syafiq ? "text-emerald-500" : ""
       )}
     >
       Syafiq
@@ -74,7 +74,7 @@
     <span
       class={twMerge(
         "text-3xl transition-colors duration-500",
-        accent.abdillah ? "text-teal-300" : ""
+        accent.abdillah ? "text-emerald-500" : ""
       )}
     >
       Abdillah
@@ -82,7 +82,7 @@
     <span
       class={twMerge(
         "text-3xl transition-colors duration-500",
-        accent.umarghanis ? "text-teal-300" : ""
+        accent.umarghanis ? "text-emerald-500" : ""
       )}
     >
       Umarghanis
@@ -102,4 +102,16 @@
   >
     {profile.email}
   </a>
+  <section>
+    {#each socials as social}
+      <a
+        href={social.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block mt-2 mr-2 text-blue-700"
+      >
+        {social.text}
+      </a>
+    {/each}
+  </section>
 </Container>

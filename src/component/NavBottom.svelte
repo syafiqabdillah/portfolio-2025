@@ -12,11 +12,17 @@
 
 <div
   class={twMerge(
-    "fixed bottom-0 left-0 right-0 flex justify-around p-4 flex-wrap gap-2",
+    "fixed bottom-0 left-0 right-0 flex justify-center",
     theme.isDark ? "bg-zinc-700 text-zinc-300" : "bg-zinc-200"
   )}
 >
-  {#each menu as nav}
-    <a href={`#${nav.id}`}>{nav.name}</a>
-  {/each}
+  <div class="flex justify-around max-w-[400px] items-stretch gap-2 flex-wrap">
+    {#each menu as nav}
+      <a
+        href={`#${nav.id}`}
+        class="hover:bg-zinc-300 hover:text-zinc-700 hover:rounded-xl hover:-translate-y-2 transition-all duration-500 p-3"
+        >{nav.name}</a
+      >
+    {/each}
+  </div>
 </div>

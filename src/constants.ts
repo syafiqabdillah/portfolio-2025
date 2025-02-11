@@ -32,7 +32,7 @@ export const experiences: Experience[] = [
 export const socials: Social[] = [
   {
     id: "linkedin",
-    url: "https://www.linkedin.com/in/syafiq-abdillah-1b634b78/",
+    url: "https://www.linkedin.com/in/syafiq-abdillah-umarghanis-1b634b78/",
     text: "LinkedIn",
   },
   {

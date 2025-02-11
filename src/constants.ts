@@ -31,24 +31,14 @@ export const experiences: Experience[] = [
 
 export const socials: Social[] = [
   {
-    id: "github",
-    url: "https://www.github.com/syafiqabdillah",
-    text: "Follow me on Github",
-  },
-  {
-    id: "twitter",
-    url: "https://www.twitter.com/umarghanis",
-    text: "Stalk me on Twitter",
-  },
-  {
-    id: "instagram",
-    url: "https://www.instagram.com/syafiq.au",
-    text: "See me on Instagram",
-  },
-  {
     id: "linkedin",
     url: "https://www.linkedin.com/in/syafiq-abdillah-1b634b78/",
-    text: "Let's connect on Linkedin",
+    text: "LinkedIn",
+  },
+  {
+    id: "github",
+    url: "https://www.github.com/syafiqabdillah",
+    text: "Github",
   },
 ];
 

@@ -96,19 +96,20 @@
   >
     {profile.title}
   </div>
-  <a
-    href="mailto:${profile.email}"
-    class={twMerge("mt-4", theme.isDark ? "text-blue-300" : "text-blue-700")}
-  >
-    {profile.email}
-  </a>
-  <section>
+
+  <section class="flex gap-3 mt-3">
+    <a
+      href="mailto:${profile.email}"
+      class={twMerge("", theme.isDark ? "text-blue-300" : "text-blue-700")}
+    >
+      Email
+    </a>
     {#each socials as social}
       <a
         href={social.url}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-block mt-2 mr-2 text-blue-700"
+        class={twMerge("", theme.isDark ? "text-blue-300" : "text-blue-700")}
       >
         {social.text}
       </a>

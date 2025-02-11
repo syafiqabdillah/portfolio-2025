@@ -11,9 +11,7 @@
 
   const ios: IntersectionObserver[] = [];
 
-  const getTransform = (id: number) => {
-    return isEven(id) ? `translate-x-[20px]` : `translate-x-[-20px]`;
-  };
+  let currentlyLit: null | number = $state(null);
 
   const createIO = () => {
     return new IntersectionObserver(
@@ -21,15 +19,8 @@
         const entry = entries[0];
         const doc = entry.target as HTMLElement;
         const id = Number(doc.id.split("-")[1]);
-        const img = doc.querySelector("img");
         if (entry.isIntersecting && entry.intersectionRatio >= 1) {
-          img?.classList.add(getTransform(id), "rounded-xl");
-        }
-        if (
-          entry.intersectionRatio <= 0 &&
-          img?.classList.contains(getTransform(id))
-        ) {
-          img?.classList.remove(getTransform(id), "rounded-xl");
+          currentlyLit = id;
         }
       },
       {
@@ -61,14 +52,19 @@
       id={`project-${index}`}
       class="mb-[50px] flex flex-col mx-4 w-full max-w-[700px] gap-3 px-4"
     >
-      <div class="font-bold">
+      <div
+        class={twMerge(
+          "font-bold project-name transition-colors duration-500 ease-in-out",
+          currentlyLit === index ? "text-emerald-500" : ""
+        )}
+      >
         {project.name}
       </div>
       <div class="text-xs tracking-wide leading-5">
         {@html project.desc}
       </div>
       <div class="flex gap-2 flex-wrap">
-        {#each project.tech as tech}
+        {#each project.tech as tech, idx}
           <div
             class={twMerge(
               "px-2 py-1 text-xs border border-solid flex items-center justify-center rounded-full text-nowrap",
@@ -82,7 +78,8 @@
       {#if project.src}
         <img
           class={twMerge(
-            `mt-[10px] transition-all duration-700 hover:rounded-xl`
+            `mt-[10px] transition-all duration-700 hover:rounded-xl`,
+            currentlyLit === index ? "translate-x-[20px] rounded-xl" : ""
           )}
           src={project.src}
           alt={project.name}

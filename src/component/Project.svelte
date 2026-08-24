@@ -25,7 +25,7 @@
       },
       {
         threshold: 1,
-      }
+      },
     );
   };
 
@@ -46,7 +46,7 @@
 </script>
 
 <Container id="projects">
-  <h2 class="mb-[25px]">Personal Projects</h2>
+  <h2 class="mb-[25px] text-2xl">Personal Projects</h2>
   {#each projects as project, index}
     <div
       id={`project-${index}`}
@@ -54,21 +54,21 @@
     >
       <div
         class={twMerge(
-          "font-bold project-name transition-colors duration-500 ease-in-out",
-          currentlyLit === index ? "text-emerald-500" : ""
+          "font-bold text-lg project-name transition-colors duration-500 ease-in-out",
+          currentlyLit === index ? "text-emerald-500" : "",
         )}
       >
         {project.name}
       </div>
-      <div class="text-xs tracking-wide leading-5">
+      <div class="text-md">
         {@html project.desc}
       </div>
       <div class="flex gap-2 flex-wrap">
-        {#each project.tech as tech, idx}
+        {#each project.tech as tech}
           <div
             class={twMerge(
-              "px-2 py-1 text-xs border border-solid flex items-center justify-center rounded-full text-nowrap",
-              theme.isDark ? "border-zinc-600" : "border-zinc-400"
+              "text-xs flex items-center justify-center rounded-full text-nowrap",
+              theme.isDark ? "border-zinc-600" : "border-zinc-100",
             )}
           >
             {tech}
@@ -79,7 +79,7 @@
         <img
           class={twMerge(
             `mt-[10px] transition-all duration-700 hover:rounded-xl`,
-            currentlyLit === index ? "translate-x-[20px] rounded-xl" : ""
+            currentlyLit === index ? "translate-x-[3px] rounded-xl" : "",
           )}
           src={project.src}
           alt={project.name}

@@ -9,6 +9,6 @@ export default defineConfig({
     postcss,
   },
   server: {
-    port: 4000,
+    port: 3000,
   },
 });

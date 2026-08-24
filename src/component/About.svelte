@@ -22,7 +22,7 @@
     },
     {
       threshold: 0.01,
-    }
+    },
   );
 
   const ioAbdillah = new IntersectionObserver(
@@ -32,7 +32,7 @@
     },
     {
       threshold: 0.02,
-    }
+    },
   );
 
   const ioUmarghanis = new IntersectionObserver(
@@ -42,7 +42,7 @@
     },
     {
       threshold: 0.03,
-    }
+    },
   );
 
   onMount(() => {
@@ -65,24 +65,24 @@
   <h1>
     <span
       class={twMerge(
-        "text-3xl transition-colors duration-500",
-        accent.syafiq ? "text-emerald-500" : ""
+        "text-4xl transition-colors duration-500",
+        accent.syafiq ? "text-emerald-500" : "",
       )}
     >
       Syafiq
     </span>
     <span
       class={twMerge(
-        "text-3xl transition-colors duration-500",
-        accent.abdillah ? "text-emerald-500" : ""
+        "text-4xl transition-colors duration-500",
+        accent.abdillah ? "text-emerald-500" : "",
       )}
     >
       Abdillah
     </span>
     <span
       class={twMerge(
-        "text-3xl transition-colors duration-500",
-        accent.umarghanis ? "text-emerald-500" : ""
+        "text-4xl transition-colors duration-500",
+        accent.umarghanis ? "text-emerald-500" : "",
       )}
     >
       Umarghanis
@@ -90,14 +90,14 @@
   </h1>
   <div
     class={twMerge(
-      "text-xl font-semibold transition-colors duration-500",
-      theme.isDark ? "text-zinc-400" : "text-zinc-700"
+      "text-2xl font-semibold transition-colors duration-500",
+      theme.isDark ? "text-zinc-400" : "text-zinc-700",
     )}
   >
     {profile.title}
   </div>
 
-  <section class="flex gap-3 mt-3">
+  <section class="flex gap-3 mt-4">
     <a
       href="mailto:${profile.email}"
       class={twMerge("", theme.isDark ? "text-blue-300" : "text-blue-700")}

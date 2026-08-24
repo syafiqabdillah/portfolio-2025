@@ -4,7 +4,7 @@ type Theme = {
 };
 
 export const theme = $state<Theme>({
-  isDark: true,
+  isDark: false,
   toggleTheme: () => {
     theme.isDark = !theme.isDark;
   },
